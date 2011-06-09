@@ -1,0 +1,69 @@
+
+<html>
+<head>
+<title>Coming soon...</title>
+</head>
+<body>
+<div align="center" style="border: 10px solid red">
+<div align="center" style="border: 10px solid pink">
+<div align="center" style="border: 10px solid blue">
+<div align="center" style="border: 10px solid pink">
+<div align="center" style="border: 10px solid green">
+<div align="center" style="border: 10px solid orange">
+<div align="center" style="border: 10px solid purple">
+<div align="center" style="border: 10px solid pink">
+<div align="center" style="border: 10px solid cyan">
+<div align="center" style="border: 10px solid black">
+<div align="center" style="border: 10px solid lightgreen">
+<div align="center" style="border: 10px solid pink">
+<div align="center" style="border: 10px solid gray">
+<div align="center" style="border: 10px solid forestgreen">
+<div style="background-color: white">
+
+<marquee> 
+<img src="/b/not_many_whales.png"/>
+</marquee> 
+
+</div>
+</div></div></div>
+
+<script src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+      google.load("jquery", "1.3.2");
+      google.load("jqueryui", "1.7.2");
+
+      google.setOnLoadCallback(function() {
+       setTimeout(randomize, 500);
+      });
+
+      randomize = function() {
+        $("div").each(function() { 
+          var r = Math.floor(Math.random()*256);
+          var g = Math.floor(Math.random()*256);
+          var b = Math.floor(Math.random()*256);
+          var hex = getHex(r,g,b);
+          $(this).css({'border-color': hex, 'background-color': hex});
+        });
+        setTimeout(randomize, 500);
+      };
+
+      // intToHex()
+      function intToHex(n){
+      n = n.toString(16);
+      // eg: #0099ff. without this check, it would output #099ff
+      if( n.length < 2)
+		     n = "0"+n;
+		     return n;
+		     }
+		     
+		     // getHex()
+		     // shorter code for outputing the whole hex value
+		     function getHex(r, g, b){
+		     return '#'+intToHex(r)+intToHex(g)+intToHex(b);
+		     }
+
+</script>
+ 
+<h1><blink>This site temporarily under construction!</blink></h1>
+</body>
+</html>
